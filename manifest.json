@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Zandvliet tab",
+    "name": "PM Tab",
     "version": "0.30",
     "chrome_url_overrides" : {
         "newtab": "index.html"
