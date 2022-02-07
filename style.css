@@ -122,9 +122,15 @@ nav
     animation: fade-in 1s ease forwards;
 }
 
-#magister
+/* #magister
 {
     grid-column: 2/3;
+} */
+
+.spacer 
+{
+    height: 100px;
+    width: 2000px;
 }
 
 .wrapper
