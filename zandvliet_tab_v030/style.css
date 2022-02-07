@@ -25,11 +25,43 @@
     background: #555; 
 }
 
+button
+{
+    grid-row: 1;
+    background-color: #363636; /* Green */
+    border: none;
+    color: white;
+    padding: 1.2em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius:50%;  
+    transition-duration: 500ms;
+    animation: fade-in 1s ease forwards;
+    /* animation: buttons 500ms ease forwards;  */
+}
+
+button:hover
+{   
+    background: linear-gradient(90deg, rgba(255,4,102,1) 0%, rgba(255,157,0,1) 100%);
+    border: none;
+    color: white;
+    padding:  1.2em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    border-radius:50%;
+    transition-duration: 500ms;
+    transform: rotate(360deg);
+}
+
 nav
 {
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr 10%;
     min-height: 10vh;
     color: rgb(255, 255, 255);
     align-items: center;
@@ -89,11 +121,10 @@ nav
     z-index: 3;
     animation: fade-in 1s ease forwards;
 }
-     
-.spacer 
+
+#magister
 {
-    height: 100px;
-    width: 2000px;
+    grid-column: 2/3;
 }
 
 .wrapper
@@ -109,10 +140,10 @@ nav
 .box div
 {
     position: absolute;
-    height: 70px;
-    width: 70px;
-    background-origin: center;
-    background: url(./images/logo.png);
+    height: 60px;
+    width: 60px;
+    /* background-origin: center;
+    background: url(./img/zandvliet.svg); */
     background-color: transparent;
     border: 6px solid rgba(255, 123, 0, 0.8);
 }
@@ -201,6 +232,15 @@ nav
 @keyframes line-gradient{
     to {
         width: 100%;
+    }
+}
+
+@keyframes buttons{
+    0% {
+        font-size: 0em;
+    }
+    100% {
+        font-size: 1em;
     }
 }
 
