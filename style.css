@@ -12,7 +12,7 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: none; 
+    background: rgba(12, 13, 14, 100%); 
   }
    
   /* Handle */
@@ -27,13 +27,23 @@
 
 nav
 {
-    height: 100vh;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     min-height: 10vh;
     color: rgb(255, 255, 255);
     align-items: center;
     justify-items: center;
+}
+
+a
+{
+    animation: icons 2s;
+}
+
+a:hover
+{
+    animation: iconsHover 1200s;
 }
 
 #credit
@@ -99,10 +109,10 @@ nav
 .wrapper
 {   
     position: absolute;
-    background-color:  rgb(20, 20, 20);
+    background-image: url(/images/background\ 2.jpg);
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: clip;
     z-index: -1;
 }
 
@@ -185,6 +195,32 @@ nav
     top: 20%;
     left: 80%;
     animation: animate 5s linear infinite;
+}
+
+@keyframes icons{
+    0%{
+        transform: scale(1.5) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translateY(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes iconsHover{
+    0%{
+        transform: scale(1) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    0.1%{
+        transform: scale(1.5) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5) translateY(0) rotate(0);
+        opacity: 1;
+    }
 }
 
 @keyframes animate{
